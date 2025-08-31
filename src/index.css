@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CineHubLK Cinema Theme Design System */
+
+@layer base {
+  :root {
+    /* CineHubLK Theme Colors - Black & White with Red Accents */
+    --background: 0 0% 0%; /* #000000 - Pure black */
+    --foreground: 0 0% 100%; /* #ffffff - Pure white */
+
+    --card: 0 0% 5% / 0.95; /* Dark card with slight transparency */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 3% / 0.98;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 356 72% 44%; /* #bf282d - CineHub red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%; /* Dark gray for secondary elements */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 8%; /* Dark muted background */
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 356 72% 44%; /* Same as primary red */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.15; /* White borders with transparency */
+    --input: 0 0% 10%;
+    --ring: 356 72% 44%;
+
+    --radius: 0.5rem; /* 8px border radius for cinema feel */
+
+    /* Cinema Glassmorphism Variables */
+    --glass-bg: 0 0% 5% / 0.85;
+    --glass-border: 356 72% 44% / 0.3;
+    --glass-blur: blur(16px);
+
+    /* Cinema Theme Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 0%), hsl(210 11% 11%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 5% / 0.85), hsl(0 0% 10% / 0.9));
+
+    /* Hover States */
+    --primary-hover: 356 72% 35%; /* Darker red */
+    --secondary-hover: 356 72% 44% / 0.1;
+
+    /* Dark Theme Sidebar */
+    --sidebar-background: 240 10% 7% / 0.7; /* Glassmorphism */
+    --sidebar-foreground: 0 0% 100%; /* White text */
+    --sidebar-primary: 348 87% 49%; /* Primary red */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 348 87% 49% / 0.1; /* Hover state */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.2; /* Glass border */
+    --sidebar-ring: 348 87% 49%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    /* Dark Theme Sidebar Override */
+    --sidebar-background: 240 10% 7% / 0.7; /* Glassmorphism */
+    --sidebar-foreground: 0 0% 100%; /* White text */
+    --sidebar-primary: 348 87% 49%; /* Primary red */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 348 87% 49% / 0.1; /* Hover state */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.2; /* Glass border */
+    --sidebar-ring: 348 87% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
